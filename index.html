@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Certifications | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="title">Mes <span>Certifications</span></h1>
+            <p class="subtitle">Une vitrine de mes accomplissements professionnels et de mes compétences techniques.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="certifications-grid">
+            
+            <!-- Certification 1 -->
+            <div class="cert-card" data-cert="Certification.pdf">
+                <div class="cert-card-inner">
+                    <div class="cert-header">
+                        <span class="cert-badge">Professionnel</span>
+                        <h3>Certification Générale</h3>
+                    </div>
+                    <div class="cert-preview-container">
+                        <img src="assets/img/cert1-1.png" alt="Certification Générale" class="cert-thumbnail" loading="lazy">
+                    </div>
+                    <div class="cert-footer">
+                        <button class="btn-view" onclick="openModal('assets/certifs/Certification.pdf')">
+                            Agrandir le certificat
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification 2 -->
+            <div class="cert-card" data-cert="Learn the Latest Tech Skills; Advance Your Career _ Udacity.pdf">
+                <div class="cert-card-inner">
+                    <div class="cert-header">
+                        <span class="cert-badge udacity-badge">Udacity</span>
+                        <h3>Tech Skills & Career</h3>
+                    </div>
+                    <div class="cert-preview-container">
+                        <img src="assets/img/cert2-1.png" alt="Udacity Certification" class="cert-thumbnail" loading="lazy">
+                    </div>
+                    <div class="cert-footer">
+                        <button class="btn-view" onclick="openModal('assets/certifs/Learn%20the%20Latest%20Tech%20Skills;%20Advance%20Your%20Career%20_%20Udacity.pdf')">
+                            Agrandir le certificat
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal pour afficher le PDF en plein écran -->
+    <div id="certModal" class="modal">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <iframe id="modalIframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
